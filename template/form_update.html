@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %} Form Page {% endblock %}
+
+{% block content %}
+    <h2>Update Data</h2>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td><label>No Induk</label></td>
+                <td><input type="text" name="no_induk" id="no_induk" value="{{ data.no_induk }}" disabled></td>
+            </tr>
+            <tr>
+                <td><label>Nama</label></td>
+                <td><input type="text" name="nama" id="nama" value="{{ data.nama }}"></td>
+            </tr>
+            <tr>
+                <td><label>Alamat</label></td>
+                <td><textarea name="alamat" id="alamat" cols="30" rows="10"> {{ data.alamat }}</textarea></td>
+            </tr>
+        </table>
+        <input type="submit" value="Simpan">
+    </form>
+{% endblock %}

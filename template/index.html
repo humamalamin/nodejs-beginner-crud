@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %} Index Page {% endblock %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+    <table border="1" style="width:400px;border-collapse: collapse">
+        <thead>
+            <tr>
+                <th>No Induk</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in data %}
+            <tr>
+                <td>{{ d.no_induk }}</td>
+                <td>{{ d.nama }}</td>
+                <td>{{ d.alamat }}</td>
+                <td><a href="/update/{{d.no_induk}}">Ubah</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/insert"> Tambah Data </a>
+{% endblock %}
